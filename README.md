@@ -40,6 +40,7 @@ products, quantities, prices, customer IDs, and countries.
 ├── python/
 │   └── customer_purchase_behaviour_analysis.py     # cleaning, cohort, RFM pipeline
 ├── sql/
+│   ├── schema.sql                                   # CREATE TABLE statements for online_retail
 │   ├── cohort_analysis.sql                         # cohort retention query
 │   ├── rfm_analysis.sql                            # recency/frequency/monetary query
 │   ├── top_ten_customers.sql                       # top 10 customers by spend
