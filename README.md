@@ -114,11 +114,16 @@ a persona:
 
 ## How to Run
 
-1. Load `online_retail1.parquet` into a PostgreSQL database (or point the
-   script at your own source).
-2. Update the `create_engine` connection details in
+1. The original raw data was a large Excel file, converted to
+   `online_retail1.parquet` for faster loading into pandas.
+2. Run the cleaning step in
+   `python/customer_purchase_behaviour_analysis.py` — this loads
+   `online_retail1.parquet`, cleans it, and exports `cleaned_retail.csv`.
+3. Load `cleaned_retail.csv` into your PostgreSQL database (matching the
+   structure in `sql/schema.sql`).
+4. Update the `create_engine` connection details in
    `python/customer_purchase_behaviour_analysis.py` for your environment.
-3. Run the script:
+5. Run the script to generate the cohort retention heatmap and RFM segments:
 
    ```bash
    python python/customer_purchase_behaviour_analysis.py
